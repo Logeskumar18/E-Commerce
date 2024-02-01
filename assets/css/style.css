@@ -3,6 +3,11 @@
 
 .nav-buttons{
     margin-left: 60%;
+    font-size: 16px;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    top: 0;
+    left: 0;
 }
 
 *{
@@ -13,6 +18,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    
 }
 
 h1{
@@ -42,4 +48,36 @@ h5{
 
 h6{
     color: #d8d8d8;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: #000;
+    transition: 0.4s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar a:hover,
+.navbar-light .navbar-nav .nav-link.active
+.navbar a:hover{
+    color: coral;
+}
+
+.navbar a{
+    font-size: 1.2rem;
+    padding: 0 0.7px;
+    transition: 0.4s ease;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#home{
+    background-image: url('https://th.bing.com/th/id/OIP.1P5H-sx63wtEdNG7zfoeCAHaD6?rs=1&pid=ImgDetMain');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position-x: 90px;
+    background-position-y: 80px;
+
 }
