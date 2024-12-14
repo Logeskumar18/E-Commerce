@@ -2,3 +2,9 @@
     width: 40px;
     height: auto;
 }
+.card img{
+    width: 200px;
+    height: 200px;
+    /* align-self: center; */
+    margin: 20px auto;
+}
