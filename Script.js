@@ -20,19 +20,48 @@ const mob = async () => {
     document.getElementById('description3').textContent = response[3].description;
     
 
-    const data1 = await fetch('https://fakestoreapi.com/products/category/jewelery?limit=10');
+    const data1 = await fetch('https://fakestoreapi.com/products/category/jewelery?limit=4');
     const response1 = await data1.json();
     console.log(response1);
-
     const Pinmg = document.getElementsByClassName('Pimg');
     const Ptitle = document.getElementsByClassName('title');
     const PPrice = document.getElementsByClassName('Price');
     const Pdescription = document.getElementsByClassName('description');
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 4; i++) {
         Pinmg[i].src = response1[i].image;
         Ptitle[i].textContent = response1[i].title;
         PPrice[i].textContent = `₹${Math.floor(response1[i].price)}`;
         Pdescription[i].textContent = response1[i].description;
     }
+
+    const data2 = await fetch("https://fakestoreapi.com/products/category/men's clothing?limit=4");
+    const response2 = await data2.json();
+    console.log(response2);
+    const Mimg = document.getElementsByClassName('Mimg');
+    const Mtitle = document.getElementsByClassName('Mtitle');
+    const MPrice = document.getElementsByClassName('Mprice');
+    const Mdescription = document.getElementsByClassName('Mdescription');
+    for (let i = 0; i < 4; i++) {
+        Mimg[i].src = response2[i].image;
+        Mtitle[i].textContent = response2[i].title;
+        MPrice[i].textContent = `₹${Math.floor(response2[i].price)}`;
+        Mdescription[i].textContent = response2[i].description;
+    }
+
+    const data3 = await fetch("https://fakestoreapi.com/products/category/women's clothing?limit=4");
+    const response3 = await data3.json();
+    console.log(response3);
+    const Wimg = document.getElementsByClassName('Wimg');
+    const Wtitle = document.getElementsByClassName('Wtitle');
+    const WPrice = document.getElementsByClassName('Wprice');
+    const Wdescription = document.getElementsByClassName('Wdescription');
+    for (let i = 0; i < 4; i++) {
+        Wimg[i].src = response3[i].image;
+        Wtitle[i].textContent = response3[i].title;
+        WPrice[i].textContent = `₹${Math.floor(response3[i].price)}`;
+        Wdescription[i].textContent = response3[i].description;
+    }
+
+
 }
 mob();
